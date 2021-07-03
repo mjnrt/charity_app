@@ -7,7 +7,7 @@
     <header class="header--main-page">
         <nav class="container container--70">
             <ul class="nav--actions">
-                <li><a href={% url 'login' %} class="btn btn--small btn--without-border">Zaloguj</a></li>
+                <li><a href="{% url 'login' %}" class="btn btn--small btn--without-border">Zaloguj</a></li>
                 <li><a href="#" class="btn btn--small btn--highlighted">Załóż konto</a></li>
             </ul>
 
@@ -84,9 +84,9 @@
             <h2>O nas</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas vitae animi rem pariatur incidunt
                 libero optio esse quisquam illo omnis.</p>
-            <img src={% static "images/signature.svg" %} class="about-us--text-signature" alt="Signature"/>
+            <img src="{% static "images/signature.svg" %}" class="about-us--text-signature" alt="Signature"/>
         </div>
-        <div class="about-us--image"><img src={% static "images/about-us.jpg" %} alt="People"/></div>
+        <div class="about-us--image"><img src="{% static "images/about-us.jpg" %}" alt="People in circle"/></div>
     </section>
 
     <section id="help" class="help">
