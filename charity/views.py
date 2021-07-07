@@ -1,12 +1,19 @@
 from django.shortcuts import render
 from django.views import View
+from .models import Donation, Institution
 
 
 class LandingPage(View):
     template_name = "charity/index.html"
 
     def get(self, request):
-        return render(request, self.template_name)
+        bags_quantity = []
+        for x in Donation.objects.all():
+            bags_quantity.append(x.quantity)
+        institutions = Institution.objects.count()
+        ctx = {'bags': sum(bags_quantity),
+               'institution': institutions}
+        return render(request, self.template_name, ctx)
 
 
 class AddDonation(View):
