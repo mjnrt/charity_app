@@ -10,9 +10,11 @@ class LandingPage(View):
         bags_quantity = []
         for x in Donation.objects.all():
             bags_quantity.append(x.quantity)
-        institutions = Institution.objects.count()
-        ctx = {'bags': sum(bags_quantity),
-               'institution': institutions}
+        institutions_counter = Institution.objects.count()
+        institutions = Institution.objects.all()
+        ctx = {'bags_counter': sum(bags_quantity),
+               'institutions_counter': institutions_counter,
+               'institutions': institutions}
         return render(request, self.template_name, ctx)
 
 
