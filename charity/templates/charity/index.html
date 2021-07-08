@@ -113,7 +113,7 @@
                         </div>
 
                         <div class="col">
-                            <div class="text">{{ institution.categories }}</div>
+                            <div class="text">{{ institution.categories.all|join:','  }}</div>
                         </div>
                     </li>
                     {% endif %}
@@ -147,7 +147,7 @@
                             </div>
 
                             <div class="col">
-                                <div class="text">{{ institution.categories }}</div>
+                                <div class="text">{{ institution.categories.all|join:',' }}</div>
                             </div>
                         </li>
                     {% endif %}
@@ -179,7 +179,7 @@
                             </div>
 
                             <div class="col">
-                                <div class="text">{{ institution.categories }}</div>
+                                <div class="text">{{ institution.categories.all|join:','  }}</div>
                             </div>
                         </li>
                     {% endif %}
